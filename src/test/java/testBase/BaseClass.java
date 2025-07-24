@@ -11,7 +11,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 public class BaseClass {
-	public WebDriver driver;
+	public static WebDriver driver;
 	public Logger logger;
 	public Properties p;
 	
@@ -32,7 +32,8 @@ public class BaseClass {
 	
 	@AfterClass
     public void tearDown() {
-    	driver.quit();
+		System.out.println("exit");
+    	//driver.quit();
     }
 	
 

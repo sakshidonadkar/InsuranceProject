@@ -4,29 +4,33 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
 
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
-import pageObjects.travelInsurance;
+import pageObjects.TravelInsurance;
 import testBase.BaseClass;
 
 public class TravelTest extends BaseClass{
 	public Properties p;
-	WebDriver driver;
+	TravelInsurance tp; 
+
 	@Test
 	public void travel() throws InterruptedException, IOException {
 		FileReader file = new FileReader("./src//test//resources//config.properties");
 		p= new Properties();
 		p.load(file);
-    	
-    	travelInsurance tp = new travelInsurance(driver);
-    	tp.clickOnTravel();
+    	tp = new TravelInsurance(driver);
+     	tp.clickOnTravel();
     	tp.searchClick();
-
-        tp.searchCountry(p.getProperty("country"));
-        
-    	tp.searchClickOnList();
-    	Thread.sleep(10000);
+        tp.searchCountryList();
+        tp.startDateClick();
+        tp.clickOnStartDate();
+        tp.endDateClick();
+        tp.clickOnEndDate();
+        tp.clickContinue();
+        tp.selectPersons();
+        tp.Dropdown();
+        tp.clickOnHealthOption();
+        tp.explorePlans();
 	}
 	
 	
