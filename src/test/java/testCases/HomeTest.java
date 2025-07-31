@@ -2,6 +2,7 @@ package testCases;
 
 import java.io.FileReader;
 import java.io.IOException;
+import java.text.ParseException;
 import java.util.Properties;
 
 import org.testng.annotations.Test;
@@ -15,7 +16,7 @@ public class HomeTest  extends BaseClass{
 	HomeInsurance hi; 
 
 	@Test(dataProvider = "PlanData", dataProviderClass = ExcelUtils.class)
-	public void homeSection(String name, String phone, String homeVal, String homeItems) throws InterruptedException, IOException {
+	public void homeSection(String name, String phone, String homeVal, String homeItems) throws InterruptedException, IOException, ParseException {
 		FileReader file = new FileReader("./src//test//resources//config.properties");
 		p= new Properties();
 		p.load(file);

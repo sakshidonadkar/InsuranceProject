@@ -8,7 +8,7 @@
     <classes>
       <class name="testCases.HomeTest">
         <methods>
-          <include name="homeSection" invocation-numbers="0 1 2 3"/>
+          <include name="homeSection" invocation-numbers="1 2"/>
           <include name="tearDown"/>
           <include name="setup"/>
         </methods>
