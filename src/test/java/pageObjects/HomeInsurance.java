@@ -1,7 +1,11 @@
 package pageObjects;
 
+import java.text.NumberFormat;
+import java.text.ParseException;
 import java.time.Duration;
 import java.util.List;
+import java.util.Locale;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.StaleElementReferenceException;
@@ -66,14 +70,17 @@ public class HomeInsurance extends BasePage {
 		viewBtn.click();
 	}
 
-	public void propertyDetails(String homeVal, String homeItems) {
+	public void propertyDetails(String homeVal, String homeItems) throws ParseException {
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("StructureValue")));
 		marketValueHome.click();
 		marketValueHome.sendKeys(homeVal);
 		valueOfHomeItems.click();
-		valueOfHomeItems.sendKeys(homeItems);	
-		int price = Integer.parseInt(homeVal);
-		int price1 = Integer.parseInt(homeItems);
+		valueOfHomeItems.sendKeys(homeItems);
+		NumberFormat format = NumberFormat.getInstance(Locale.US);
+		Number number = format.parse(homeVal);
+		int price = number.intValue();
+		Number number1 = format.parse(homeItems);
+		int price1 = number1.intValue();
 		if((price >= 1000000 && price <= 1000000000) && (price1 >= 100000 && price1 <= 500000000)) {
 			viewPlans.click();
 		}else {		
