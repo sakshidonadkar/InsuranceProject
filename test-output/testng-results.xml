@@ -1,25 +1,335 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="0" failed="4" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-24T17:37:16 IST" name="Default suite" finished-at="2025-07-24T17:37:38 IST" duration-ms="21077">
+  <suite started-at="2025-07-30T18:21:32 IST" name="Suite" finished-at="2025-07-30T18:23:24 IST" duration-ms="111968">
     <groups>
     </groups>
-    <test started-at="2025-07-24T17:37:16 IST" name="Default test" finished-at="2025-07-24T17:37:38 IST" duration-ms="21077">
-      <class name="testCases.TravelTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.TravelTest@19b93fa8]" started-at="2025-07-24T17:37:17 IST" name="setup" finished-at="2025-07-24T17:37:26 IST" duration-ms="9218" status="PASS">
+    <test started-at="2025-07-30T18:21:32 IST" name="Test" finished-at="2025-07-30T18:23:24 IST" duration-ms="111968">
+      <class name="testCases.HomeTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.HomeTest@49ff7d8c]" started-at="2025-07-30T18:21:33 IST" name="setup" finished-at="2025-07-30T18:21:40 IST" duration-ms="6965" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="travel()[pri:0, instance:testCases.TravelTest@19b93fa8]" started-at="2025-07-24T17:37:26 IST" name="travel" finished-at="2025-07-24T17:37:38 IST" duration-ms="11732" status="PASS">
+        <test-method signature="homeSection(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.HomeTest@49ff7d8c]" started-at="2025-07-30T18:21:40 IST" name="homeSection" data-provider="PlanData" finished-at="2025-07-30T18:21:48 IST" duration-ms="7364" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Deeraj Patil]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[9845768541]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[10,000,000]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1,000,000]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NumberFormatException">
+            <message>
+              <![CDATA[For input string: "10,000,000"]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NumberFormatException: For input string: "10,000,000"
+at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+at java.base/java.lang.Integer.parseInt(Integer.java:662)
+at java.base/java.lang.Integer.parseInt(Integer.java:778)
+at pageObjects.HomeInsurance.propertyDetails(HomeInsurance.java:75)
+at testCases.HomeTest.homeSection(HomeTest.java:25)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NumberFormatException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- travel -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TravelTest@19b93fa8]" started-at="2025-07-24T17:37:38 IST" name="tearDown" finished-at="2025-07-24T17:37:38 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- homeSection -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.HomeTest@49ff7d8c]" started-at="2025-07-30T18:21:48 IST" name="tearDown" finished-at="2025-07-30T18:21:51 IST" duration-ms="3418" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testCases.TravelTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.HomeTest@49ff7d8c]" started-at="2025-07-30T18:21:51 IST" name="setup" finished-at="2025-07-30T18:21:57 IST" duration-ms="5892" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="homeSection(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.HomeTest@49ff7d8c]" started-at="2025-07-30T18:21:57 IST" name="homeSection" data-provider="PlanData" finished-at="2025-07-30T18:22:04 IST" duration-ms="6484" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Akash]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[9876543210]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[500,000]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[6,500,000]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NumberFormatException">
+            <message>
+              <![CDATA[For input string: "500,000"]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NumberFormatException: For input string: "500,000"
+at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+at java.base/java.lang.Integer.parseInt(Integer.java:662)
+at java.base/java.lang.Integer.parseInt(Integer.java:778)
+at pageObjects.HomeInsurance.propertyDetails(HomeInsurance.java:75)
+at testCases.HomeTest.homeSection(HomeTest.java:25)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NumberFormatException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homeSection -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.HomeTest@49ff7d8c]" started-at="2025-07-30T18:22:04 IST" name="tearDown" finished-at="2025-07-30T18:22:08 IST" duration-ms="3972" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.HomeTest@49ff7d8c]" started-at="2025-07-30T18:22:08 IST" name="setup" finished-at="2025-07-30T18:22:14 IST" duration-ms="6174" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="homeSection(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.HomeTest@49ff7d8c]" started-at="2025-07-30T18:22:14 IST" name="homeSection" data-provider="PlanData" finished-at="2025-07-30T18:23:00 IST" duration-ms="46214" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Samantha]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[50,000]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[20,000]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for presence of element located by: By.id: StructureValue (tried for 30 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.id: StructureValue (tried for 30 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at pageObjects.HomeInsurance.propertyDetails(HomeInsurance.java:70)
+at testCases.HomeTest.homeSection(HomeTest.java:25)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#StructureValue"}
+  (Session info: MicrosoftEdge=138.0.3351.109)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [eb79267d900e07ebea9e08d16c1099dd, findElement {using=id, value=StructureValue}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 138.0.3351.109, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:59258}, msedge: {msedgedriverVersion: 138.0.3351.83 (16e2a7bef320..., userDataDir: C:\Users\2413644\AppData\Lo...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59258/devtoo..., se:cdpVersion: 138.0.3351.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: eb79267d900e07ebea9e08d16c1099dd
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:171)
+at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:168)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+... 28 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homeSection -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.HomeTest@49ff7d8c]" started-at="2025-07-30T18:23:01 IST" name="tearDown" finished-at="2025-07-30T18:23:06 IST" duration-ms="4346" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.HomeTest@49ff7d8c]" started-at="2025-07-30T18:23:06 IST" name="setup" finished-at="2025-07-30T18:23:12 IST" duration-ms="5997" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="homeSection(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.HomeTest@49ff7d8c]" started-at="2025-07-30T18:23:12 IST" name="homeSection" data-provider="PlanData" finished-at="2025-07-30T18:23:20 IST" duration-ms="8053" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Afra joseph]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[8765493021]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[1,000,000]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[100,000]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NumberFormatException">
+            <message>
+              <![CDATA[For input string: "1,000,000"]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NumberFormatException: For input string: "1,000,000"
+at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+at java.base/java.lang.Integer.parseInt(Integer.java:662)
+at java.base/java.lang.Integer.parseInt(Integer.java:778)
+at pageObjects.HomeInsurance.propertyDetails(HomeInsurance.java:75)
+at testCases.HomeTest.homeSection(HomeTest.java:25)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NumberFormatException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homeSection -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.HomeTest@49ff7d8c]" started-at="2025-07-30T18:23:20 IST" name="tearDown" finished-at="2025-07-30T18:23:24 IST" duration-ms="3723" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.HomeTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
